@@ -90,6 +90,7 @@
     width:100%;
     aspect-ratio:16/9;
     object-fit:cover;
+    object-position:center 20%;
     display:block;
   }
 
@@ -105,7 +106,7 @@
 
   /* ===== QUICK CONTACT ===== */
   .quick-contact{
-    padding:0 40px 110px;
+    padding:40px 40px 110px;
     max-width:1200px; margin:0 auto;
   }
   .qc-card{
@@ -128,11 +129,11 @@
   .qc-btn{
     margin-top:10px;
     display:inline-flex; align-items:center; justify-content:center; gap:9px;
-    border:none; background:var(--whatsapp); color:#fff;
+    border:none; background:var(--accent); color:#fff;
     padding:14px 24px; border-radius:999px; font-weight:600; font-size:0.9rem;
     cursor:pointer; transition:background .2s ease, transform .2s ease;
   }
-  .qc-btn:hover{ background:var(--whatsapp-dark); transform:translateY(-2px); }
+  .qc-btn:hover{ background:#1c34c9; transform:translateY(-2px); }
   .qc-btn svg{ width:17px; height:17px; }
 
   @media (max-width:720px){
@@ -140,6 +141,12 @@
   }
 
   /* ===== STORY BEATS ===== */
+  /* ===== MID CTA ===== */
+  .mid-cta{
+    padding:10px 40px 60px;
+    text-align:center;
+  }
+
   .beat{
     padding:70px 0;
     border-top:1px solid var(--line);
@@ -162,9 +169,9 @@
 
   .beat-media{ position:relative; order:-1; }
   .beat-media img{
-    width:100%; border-radius:20px; object-fit:cover;
+    width:100%; border-radius:20px; object-fit:cover; object-position:center 15%;
   }
-  .beat-media.-single img{ aspect-ratio:16/10; }
+  .beat-media.-single img{ aspect-ratio:4/3; }
   .beat-media.-duo{ display:grid; grid-template-columns:1.3fr 1fr; gap:14px; align-items:end; }
   .beat-media.-duo img:first-child{ aspect-ratio:4/5; }
   .beat-media.-duo img:last-child{ aspect-ratio:3/4; }
@@ -204,7 +211,7 @@
   /* ===== CLOSING ===== */
   .closing{
     position:relative;
-    padding:130px 40px;
+    padding:130px 40px 90px;
     text-align:center;
     border-top:1px solid var(--line);
     overflow:hidden;
@@ -240,6 +247,15 @@
     flex-wrap:wrap; gap:14px;
   }
   footer .foot-note{ font-family:'Space Mono', monospace; font-size:0.72rem; color:var(--muted); }
+  .foot-social{
+    display:flex; align-items:center; gap:16px;
+  }
+  .foot-social a{
+    color:var(--ink); transition:color .2s ease;
+    display:flex; align-items:center;
+  }
+  .foot-social a:hover{ color:var(--accent); }
+  .foot-social svg{ width:20px; height:20px; }
 
   @media (max-width:600px){
     header, .hero, .quick-contact, .disclaimer, footer .container{ padding-left:24px; padding-right:24px; }
@@ -261,24 +277,11 @@
   <div class="hero-cover">
     <img src="crowd-bw.jpeg" alt="Gianluca tra il pubblico">
   </div>
-</section>
-
-<section class="quick-contact" id="contatto">
-  <div class="qc-card">
-    <div class="qc-text">
-      <span class="label">Prossimo passo</span>
-      <h2>Vuoi capire se fa per te?</h2>
-      <p>Lasciami i tuoi dati, ti rispondo io di persona per una call conoscitiva. Nessuna promessa, solo una conversazione onesta.</p>
-    </div>
-    <div class="qc-form">
-      <input type="text" placeholder="Nome e cognome">
-      <input type="tel" placeholder="Telefono">
-      <input type="email" placeholder="Email">
-      <a href="https://wa.me/393515190441?text=Ciao%20Gianluca%2C%20vorrei%20saperne%20di%20pi%C3%B9" class="qc-btn" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.46 3.45 1.27 4.9L2 22l5.25-1.38A9.94 9.94 0 0 0 12.04 22c5.52 0 10-4.48 10-10s-4.48-10-10-10Zm0 18.15c-1.6 0-3.13-.43-4.46-1.24l-.32-.19-3.11.82.83-3.03-.21-.32a8.15 8.15 0 0 1-1.26-4.35c0-4.51 3.67-8.18 8.18-8.18a8.13 8.13 0 0 1 8.18 8.18c0 4.51-3.67 8.18-8.18 8.18Zm4.48-6.13c-.25-.12-1.45-.71-1.67-.79-.22-.08-.39-.12-.55.12-.16.25-.63.79-.78.95-.14.16-.29.18-.53.06-.25-.12-1.06-.39-2.01-1.24-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42-.14-.01-.31-.01-.47-.01-.16 0-.43.06-.65.31-.22.25-.86.84-.86 2.05s.88 2.38 1 2.54c.12.16 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.52.59.19 1.12.16 1.54.1.47-.07 1.45-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.11-.22-.17-.47-.29Z"/></svg>
-        Scrivimi su WhatsApp
-      </a>
-    </div>
+  <div class="btn-row" style="margin-top:36px; display:flex; justify-content:center;">
+    <a href="https://wa.me/393515190441?text=Ciao%20Gianluca%2C%20ho%20letto%20la%20tua%20storia%20e%20vorrei%20saperne%20di%20pi%C3%B9" class="btn" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.46 3.45 1.27 4.9L2 22l5.25-1.38A9.94 9.94 0 0 0 12.04 22c5.52 0 10-4.48 10-10s-4.48-10-10-10Zm0 18.15c-1.6 0-3.13-.43-4.46-1.24l-.32-.19-3.11.82.83-3.03-.21-.32a8.15 8.15 0 0 1-1.26-4.35c0-4.51 3.67-8.18 8.18-8.18a8.13 8.13 0 0 1 8.18 8.18c0 4.51-3.67 8.18-8.18 8.18Zm4.48-6.13c-.25-.12-1.45-.71-1.67-.79-.22-.08-.39-.12-.55.12-.16.25-.63.79-.78.95-.14.16-.29.18-.53.06-.25-.12-1.06-.39-2.01-1.24-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42-.14-.01-.31-.01-.47-.01-.16 0-.43.06-.65.31-.22.25-.86.84-.86 2.05s.88 2.38 1 2.54c.12.16 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.52.59.19 1.12.16 1.54.1.47-.07 1.45-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.11-.22-.17-.47-.29Z"/></svg>
+      Scrivimi su WhatsApp
+    </a>
   </div>
 </section>
 
@@ -311,6 +314,13 @@
   </div>
 </section>
 
+<section class="mid-cta">
+  <a href="https://wa.me/393515190441?text=Ciao%20Gianluca%2C%20ho%20letto%20la%20tua%20storia%20e%20vorrei%20saperne%20di%20pi%C3%B9" class="btn" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.46 3.45 1.27 4.9L2 22l5.25-1.38A9.94 9.94 0 0 0 12.04 22c5.52 0 10-4.48 10-10s-4.48-10-10-10Zm0 18.15c-1.6 0-3.13-.43-4.46-1.24l-.32-.19-3.11.82.83-3.03-.21-.32a8.15 8.15 0 0 1-1.26-4.35c0-4.51 3.67-8.18 8.18-8.18a8.13 8.13 0 0 1 8.18 8.18c0 4.51-3.67 8.18-8.18 8.18Zm4.48-6.13c-.25-.12-1.45-.71-1.67-.79-.22-.08-.39-.12-.55.12-.16.25-.63.79-.78.95-.14.16-.29.18-.53.06-.25-.12-1.06-.39-2.01-1.24-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42-.14-.01-.31-.01-.47-.01-.16 0-.43.06-.65.31-.22.25-.86.84-.86 2.05s.88 2.38 1 2.54c.12.16 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.52.59.19 1.12.16 1.54.1.47-.07 1.45-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.11-.22-.17-.47-.29Z"/></svg>
+    Scrivimi su WhatsApp
+  </a>
+</section>
+
 <section class="beat">
   <div class="container">
     <div class="beat-copy">
@@ -339,7 +349,7 @@
     </div>
     <div>
       <img src="friend.jpeg" alt="Gianluca con un amico">
-      <div class="strip-cap">Con un amico</div>
+      <div class="strip-cap">Partito da zero</div>
     </div>
   </div>
 </section>
@@ -347,10 +357,24 @@
 <section class="closing">
   <h2>Non è il punto di partenza a contare. È <em>quanto ci metti.</em></h2>
   <p>Se vuoi capire come funziona davvero, iniziamo con una conversazione.</p>
-  <a href="https://wa.me/393515190441?text=Ciao%20Gianluca%2C%20ho%20letto%20la%20tua%20storia%20e%20vorrei%20saperne%20di%20pi%C3%B9" class="btn" target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.46 3.45 1.27 4.9L2 22l5.25-1.38A9.94 9.94 0 0 0 12.04 22c5.52 0 10-4.48 10-10s-4.48-10-10-10Zm0 18.15c-1.6 0-3.13-.43-4.46-1.24l-.32-.19-3.11.82.83-3.03-.21-.32a8.15 8.15 0 0 1-1.26-4.35c0-4.51 3.67-8.18 8.18-8.18a8.13 8.13 0 0 1 8.18 8.18c0 4.51-3.67 8.18-8.18 8.18Zm4.48-6.13c-.25-.12-1.45-.71-1.67-.79-.22-.08-.39-.12-.55.12-.16.25-.63.79-.78.95-.14.16-.29.18-.53.06-.25-.12-1.06-.39-2.01-1.24-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42-.14-.01-.31-.01-.47-.01-.16 0-.43.06-.65.31-.22.25-.86.84-.86 2.05s.88 2.38 1 2.54c.12.16 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.52.59.19 1.12.16 1.54.1.47-.07 1.45-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.11-.22-.17-.47-.29Z"/></svg>
-    Scrivimi su WhatsApp
-  </a>
+</section>
+
+<section class="quick-contact" id="contatto">
+  <div class="qc-card">
+    <div class="qc-text">
+      <h2>Lasciami i tuoi dati</h2>
+      <p>Compila il modulo: ti risponderò io di persona via email. Nessuna promessa, solo una conversazione onesta.</p>
+    </div>
+    <div class="qc-form">
+      <input type="text" id="qc-nome" placeholder="Nome e cognome">
+      <input type="tel" id="qc-tel" placeholder="Telefono">
+      <input type="email" id="qc-email" placeholder="La tua email">
+      <button type="button" class="qc-btn" onclick="inviaModulo()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2Z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        Invia la candidatura
+      </button>
+    </div>
+  </div>
 </section>
 
 <div class="disclaimer">
@@ -360,9 +384,40 @@
 <footer>
   <div class="container">
     <div class="logo" style="font-size:0.95rem;">Gianluca</div>
-    <span class="foot-note">© 2026</span>
+    <div class="foot-social">
+      <a href="https://www.instagram.com/gianlucapeloso?igsh=aXJhMnh1dWgxOWRr&wa_status_inline=true" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37Z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+      </a>
+      <span class="foot-note">© 2026</span>
+    </div>
   </div>
 </footer>
+
+<script>
+  function inviaModulo(){
+    const nome = document.getElementById('qc-nome').value.trim();
+    const tel = document.getElementById('qc-tel').value.trim();
+    const email = document.getElementById('qc-email').value.trim();
+
+    if(!nome || !tel){
+      alert('Inserisci almeno nome e telefono prima di inviare.');
+      return;
+    }
+
+    const oggetto = encodeURIComponent('Candidatura dalla landing page');
+    const corpo = encodeURIComponent(
+      'Nome e cognome: ' + nome + '\n' +
+      'Telefono: ' + tel + '\n' +
+      'Email: ' + (email || '-') + '\n'
+    );
+
+    window.location.href = 'mailto:gianlucapeloso1994@gmail.com?subject=' + oggetto + '&body=' + corpo;
+  }
+</script>
 
 </body>
 </html>
