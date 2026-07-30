@@ -81,6 +81,17 @@
     margin-top:32px; line-height:1.6;
   }
   .hero .btn-row{ margin-top:44px; }
+  .hero-cover{
+    margin-top:56px;
+    border-radius:20px;
+    overflow:hidden;
+  }
+  .hero-cover img{
+    width:100%;
+    aspect-ratio:16/9;
+    object-fit:cover;
+    display:block;
+  }
 
   .btn{
     display:inline-flex; align-items:center; gap:10px;
@@ -158,6 +169,38 @@
   .beat-media.-duo img:first-child{ aspect-ratio:4/5; }
   .beat-media.-duo img:last-child{ aspect-ratio:3/4; }
 
+  /* ===== FEATURE (poster/riconoscimento) ===== */
+  .feature{
+    padding:10px 40px 90px;
+    max-width:1200px; margin:0 auto;
+    text-align:center;
+  }
+  .feature img{
+    max-width:420px; width:100%; margin:0 auto;
+    border-radius:20px;
+    box-shadow:0 30px 60px rgba(18,18,18,0.14);
+  }
+  .feature .strip-cap{ margin-top:16px; }
+
+  /* ===== EXTRA STRIP ===== */
+  .strip{
+    padding:10px 40px 90px;
+    max-width:1200px; margin:0 auto;
+  }
+  .strip-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:20px;
+  }
+  .strip-grid img{
+    width:100%; aspect-ratio:5/4; object-fit:cover; border-radius:18px;
+  }
+  .strip-cap{
+    font-family:'Space Mono', monospace; font-size:0.72rem; color:var(--muted);
+    margin-top:10px; text-transform:uppercase; letter-spacing:0.08em;
+  }
+  @media (max-width:700px){
+    .strip-grid{ grid-template-columns:1fr; }
+  }
+
   /* ===== CLOSING ===== */
   .closing{
     position:relative;
@@ -215,6 +258,9 @@
   <span class="label">La mia storia</span>
   <h1>Sette anni per capirlo.<br>Uno per <em>cambiare tutto.</em></h1>
   <p>Sono partito scettico, come probabilmente lo sei tu adesso. Ho sbagliato, ho mollato, sono tornato — stavolta con un metodo. Questa è la mia storia, così com'è andata.</p>
+  <div class="hero-cover">
+    <img src="crowd-bw.jpeg" alt="Gianluca tra il pubblico">
+  </div>
 </section>
 
 <section class="quick-contact" id="contatto">
@@ -245,7 +291,7 @@
       <p>Ho iniziato questo percorso perché mi piaceva l'ambiente e le persone che ci lavoravano. Mi chiedevo se fosse davvero possibile ottenere i risultati di cui tanto si sente parlare. I primi sette anni sono stati difficili: ascoltavo poco, non mi applicavo con costanza. Ho investito anche soldi che non avevo, per gli eventi e per formarmi — senza risultati concreti. Dopo sette anni ho mollato: per due anni ho lavorato come venditore di carte di credito per conto delle banche.</p>
     </div>
     <div class="beat-media -single">
-      <img src="assets/hero.jpeg" alt="Gianluca, i primi anni">
+      <img src="thumbsup.jpeg" alt="Gianluca, i primi anni">
     </div>
   </div>
 </section>
@@ -253,7 +299,7 @@
 <section class="beat">
   <div class="container">
     <div class="beat-media -single">
-      <img src="assets/speaking.jpeg" alt="Gianluca durante la svolta">
+      <img src="early-speaking.jpeg" alt="Gianluca durante la svolta">
     </div>
     <div class="beat-copy">
       <div class="beat-num">02</div>
@@ -274,8 +320,26 @@
       <p>Sono arrivati i primi riconoscimenti su palchi nazionali e internazionali, con la visione di lavorare a livello globale. Solo nel 2025 ho preso più di 25 voli, grazie al progetto e all'organizzazione costruita nel tempo. Con la mia compagna, oggi pianifichiamo e diversifichiamo su più asset.</p>
     </div>
     <div class="beat-media -duo">
-      <img src="assets/wave.jpeg" alt="Gianluca sul palco, oggi">
-      <img src="assets/group.jpeg" alt="Gianluca con il team, oggi">
+      <img src="stage-arm.jpeg" alt="Gianluca sul palco, oggi">
+      <img src="wave.jpeg" alt="Gianluca sul palco, saluto al pubblico">
+    </div>
+  </div>
+</section>
+
+<section class="feature">
+  <img src="director.jpeg" alt="Gianluca, riconoscimento Brand New Director">
+  <div class="strip-cap">Un nuovo traguardo raggiunto</div>
+</section>
+
+<section class="strip">
+  <div class="strip-grid">
+    <div>
+      <img src="leaders-camp.jpeg" alt="Gianluca sul palco a Leaders Camp Europe">
+      <div class="strip-cap">Leaders Camp Europe</div>
+    </div>
+    <div>
+      <img src="friend.jpeg" alt="Gianluca con un amico">
+      <div class="strip-cap">Con un amico</div>
     </div>
   </div>
 </section>
